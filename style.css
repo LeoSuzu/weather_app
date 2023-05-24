@@ -1,0 +1,182 @@
+
+/* Japanese font*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600&display=swap');
+
+/* VALUES ARE CHANGED FROM px to vw, vh, %... etc so that scales to media
+
+/* Default styles */
+.element {
+    width: 350px;
+    height: 550px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply,multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#intro {
+    font-family: 'Zen Old Mincho', serif;
+    text-justify: auto;
+}
+
+#weatherContainer {
+    display: flex;
+    flex-grow: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.50);
+    box-shadow: 1px 1px 25px black;
+    color: white;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+#weatherContainer h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: -10px;
+}
+
+.searchControl{
+    color: white;
+    text-align: center;
+    text-shadow: black;
+}
+
+#searchContainer {
+    display: inherit;
+    align-items: center;
+    width: 100%;
+}
+
+#searchContainer input {
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: Left;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+::-webkit-input-placeholder {
+    color: darkgray;
+    padding-left: 10px;
+}
+
+#searchContainer button {
+    text-align: center;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0,0,0,5);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 30%;
+
+    font-size: 20px;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    background-blend-mode: normal, color-burn;
+    cursor: pointer;
+}
+
+#searchContainer button:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+#weatherMain {
+    flex-direction: row;
+}
+#weatherMain div {
+    display: inline-block;
+}
+.weatherDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+}
+#temperature {
+    font-size: 70px;
+    margin-top: -45px;
+    margin-bottom: -10px;
+}
+#weatherDescriptionHeader {
+    margin-left: 5px;
+    font-size: 30px;
+}
+#documentIconImg{
+    width: 80px;
+    vertical-align: -30px;
+    padding-left: 70px;
+}
+
+.bottom-details {
+    margin-top: -20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.column-details-left{
+    width: 50%;
+    text-align: left;
+    flex-direction: column;
+}
+.column-details-right{
+    width: 50%;
+    text-align: left;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#hourlyForecastContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 5%;
+    height: auto;
+}
+
+.hourly-forecast {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% / 5) - 1.5em); /* Viisi columnia */
+    font-size: 15px;
+}
+
+.hourly-forecast img {
+    width: 50px
+}
+
+.background-image{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+p{
+    margin: 8px;
+}
+
+

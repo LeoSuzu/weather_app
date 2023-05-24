@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Simple weather application</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+</head>
+<body>
+    <div>
+        <img id=background-image class="background-image" src="" alt=>
+    </div>
+    <div class="element" id="weatherContainer">
+        <div>
+            <h1 id="intro">WEATHER NOW</h1>
+        </div>
+        <!--##############SEARCH SECTION################-->
+        <div id="searchContainer">
+            <input class="searchControl" type="text" placeholder="ENTER CITY or ZIP" id="searchInput">
+            <button class="searchControl" id="searchBtn">SEARCH</button>
+        </div>
+        <div class="weatherDescriptionContainer" id="weatherDescription">
+            <h2 id="cityHeader"></h2>
+            <h3 id="weatherNow-dateTime"></h3>
+            <h3 id="dateTime" ></h3>
+            <div id="temperature"></div>
+            <div id="weatherMain">
+                <div id="weatherDescriptionHeader"></div>
+                <div><img id="documentIconImg">
+            </div>
+        </div>
+        <!--##############DEATIS SECTION################-->
+        <div class="bottom-details">
+            <div class="column-details-left">
+                <p id="windSpeed"></p>
+                <p id="humidity"></p>
+                <p id="rainVolume"></p>
+            </div>
+            <div class="column-details-right">
+                <p id="feelsLike"></p>
+                <p id="cloudPercent"></p>
+                <p id="snowVolume"></p>
+            </div>
+        </div>
+            <!--##############HOURLY WEATHER CARD SECTION################-->
+            <div id="hourlyForecastContainer"></div>
+    </div>
+    <!--##############JAVASCRIPT################-->
+    <script src="script.js" ></script>
+    <script src="https://unpkg.com/@unplash/unsplash-js@latest"></script>
+    </div>
+</body>
+</html>
