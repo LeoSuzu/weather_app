@@ -2,7 +2,7 @@
 
 //Keays for fetching weather data and picture from cities
 const weatherKey = ''; // THIS IS KEY FOR OPENWEATHERMAP.ORG USE YOUR OWN KEY!!!
-const unsplushKey = ''; // THIS IS KEY FOR UNSPLASH:COM USE YOUR OWN KEY!!!
+const unsplashKey = ''; // THIS IS KEY FOR UNSPLASH:COM USE YOUR OWN KEY!!!
 
 //Set metric units for weathe data
 let units = 'metric';
@@ -63,7 +63,7 @@ async function currentInit(fetched) {
         // Must have query and client id --- https://api.unsplash.com/search/photos?query=???&client id
         // More options: https://unsplash.com/documentation#search-photos
         // Trying first to fetch a picture with "city name" + "weather condition" if not successful, use default images
-        const response = await fetch(`${fetchImage}query=${city} ${weather}&client_id=${unsplushKey}`);
+        const response = await fetch(`${fetchImage}query=${city} ${weather}&client_id=${unsplashKey}`);
         const data = await response.json();
 
         // Creating a random integer variable between 1-5 for fetching image index
@@ -80,38 +80,38 @@ async function currentInit(fetched) {
         switch (weather) {
             case 'Clear':
             case 'Few clouds':
-                backgroundElement = "url('./images/clearPicture.jpg')";
+                backgroundElement = "url('./images/clearPicture.app_large')";
                 break;
 
             case 'Clouds':
             case 'Scattered clouds':
             case 'Broken clouds':
             case 'Overcast clouds':
-                backgroundElement = "url('./images/cloudyPicture.jpg')";
+                backgroundElement = "url('./images/cloudyPicture.app_large')";
                 break;
 
             case 'Rain':
             case 'Drizzle':
-                backgroundElement = "url('./images/rainPicture.jpg')";
+                backgroundElement = "url('./images/rainPicture.app_large')";
                 break;
 
             case 'Mist':
             case 'Fog':
             case 'Haze':
             case 'Smoke':
-                backgroundElement = "url('./images/mistPicture.jpg')";
+                backgroundElement = "url('./images/mistPicture.app_large')";
                 break;
 
             case 'Thunderstorm':
             case 'Light thunderstorm':
             case 'Heavy thunderstorm':
             case 'Ragged thunderstorm':
-                backgroundElement = "url('./images/storm2.jpg')";
+                backgroundElement = "url('./images/storm2.app_large')";
                 break;
 
             case 'Snow':
             case 'Light snow':
-                backgroundElement = "url('./images/snowPicture.jpg')";
+                backgroundElement = "url('./images/snowPicture.app_large')";
                 break;
 
             default:
